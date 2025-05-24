@@ -1,0 +1,7 @@
+[Desktop Entry]
+Exec=/usr/local/bin/st
+Type=Application
+Icon=/usr/local/share/icons/st.svg
+Categories=System;TerminalEmulator
+Name=Simple Terminal
+StartupWMClass=st-256color
