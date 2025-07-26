@@ -5,6 +5,7 @@
  *
  * font: see http://freedesktop.org/software/fontconfig/fontconfig-user.html
  */
+#include <X11/Xutil.h>
 static char *font = "JetBrainsMono Nerd Font:pixelsize=15:antialias=true:autohint=true";
 static int borderpx = 2;
 
@@ -240,7 +241,9 @@ static Shortcut shortcuts[] = {
 	{ ShiftMask,            XK_Insert,      selpaste,       {.i =  0} },
 	{ TERMMOD,              XK_Num_Lock,    numlock,        {.i =  0} },
 	{ ShiftMask,            XK_Page_Up,     kscrollup,      {.i = -1} },
-    { ShiftMask,            XK_Page_Down,   kscrolldown,    {.i = -1} },
+  { ShiftMask,            XK_Page_Down,   kscrolldown,    {.i = -1} },
+  { TERMMOD,              XK_greater,     ttysend,        {.s = "setxkbmap ca multix\n"} },
+  { TERMMOD,              XK_quotedbl,    ttysend,        {.s = "setxkbmap us\n"} },
 };
 
 /*
